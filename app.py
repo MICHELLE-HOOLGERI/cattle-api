@@ -1,5 +1,6 @@
 from flask import Flask, request, jsonify
-from models.cattle_model import CattleModel
+from cattle_model import CattleModel
+
 
 app = Flask(__name__)
 model = CattleModel()
@@ -27,3 +28,4 @@ def home():
 
 if __name__ == "__main__":
     app.run(debug=True)
+
