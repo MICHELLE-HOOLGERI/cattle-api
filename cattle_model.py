@@ -3,7 +3,7 @@ from image_utils import preprocess_image
 import numpy as np
 
 IMG_SIZE = 224
-CATTLE_CLASSES = ["foot-and-mouth", "healthy", "lumpy"]
+CATTLE_CLASSES = ["foot_and_mouth", "healthy", "lumpy"]
 
 class CattleModel:
     def __init__(self):
@@ -16,4 +16,5 @@ class CattleModel:
         pred = CATTLE_CLASSES[np.argmax(preds)]
         conf = float(np.max(preds))
         return pred, conf
+
 
