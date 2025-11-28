@@ -1,5 +1,5 @@
 from tensorflow.keras.models import load_model
-from utils.image_utils import preprocess_image
+from image_utils import preprocess_image
 import numpy as np
 
 IMG_SIZE = 224
@@ -16,3 +16,4 @@ class CattleModel:
         pred = CATTLE_CLASSES[np.argmax(preds)]
         conf = float(np.max(preds))
         return pred, conf
+
